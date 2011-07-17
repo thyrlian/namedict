@@ -1,5 +1,6 @@
 # PATH_NOW = Dir.pwd.gsub(/\//,'\\').concat('\\') # for Windows OS
-require 'bigdecimal'
+require "bigdecimal"
+require "pstore"
 
 def parse_characters(file_dict)
   regex_cols = /^(\d+)\s+(.+?)\s+(\d+)\s+([0-9\.]+)\s+(.+?)\s+(.*?)$/
@@ -22,4 +23,13 @@ def parse_characters(file_dict)
   end
 
   return characters
+end
+
+def save2disk(ary_chars, saved_file)
+  db = PStore.new(saved_file)
+  db.transaction do
+    ary_chars.each do |char|
+      db["character"] = char
+    end
+  end
 end

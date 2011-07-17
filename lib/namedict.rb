@@ -1,1 +1,7 @@
-require 'namedict/char_list'
+require "bigdecimal"
+require "pstore"
+require_relative "namedict/blacklist"
+require_relative "namedict/char"
+require_relative "namedict/dict"
+require_relative "namedict/name"
+require_relative "namedict/string"
