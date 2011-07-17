@@ -2,13 +2,12 @@ class Dict
   attr_accessor :chars
 
   def initialize(file_dict, file_ps)
-    if File.exist?(file_ps) && retrieve(file_ps).size == parse(file_dict).size
-      chars = retrieve(file_ps)
+    if File.exist?(file_ps) && (chars = retrieve(file_ps)).size == (chars_parsed = parse(file_dict)).size
+      @chars = chars_retrieved
     else
-      chars = parse(file_dict)
-      store(file_ps, chars)
+      @chars = ( chars_parsed ||= parse(file_dict) )
+      store(file_ps, @chars)
     end
-    @chars = chars
   end
 
   def parse(file_dict)
@@ -43,7 +42,8 @@ class Dict
 
   def retrieve(file_ps)
     dict = PStore.new(file_ps)
-    dict.transaction { puts dict[i] }
+    chars = []
+    dict.transaction { chars << dict[i] }
     return chars
   end
 
