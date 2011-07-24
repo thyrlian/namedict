@@ -5,14 +5,19 @@ class Blacklist
     instance_eval(&block)
   end
 
+  private_class_method :new
+
   class << self
     def apply_to(dict, &block)
-      self.new(dict, &block)
+      new(dict, &block)
     end
   end
 
-  def activate(list)
-    parse_list
-    @dict.affect_by(list)
+  def activate(file_list)
+    list_excluded = File.open(File.join(path_prj, 'data', 'Blacklist', file_list), "r:utf-8").inject([]) do |chars, line|
+      chars << line.chomp
+    end
+    list_excluded.uniq!
+    @dict.affect_by(list_excluded)
   end
 end

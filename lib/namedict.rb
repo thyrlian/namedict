@@ -1,5 +1,6 @@
 require "bigdecimal"
 require "pstore"
+require "json"
 require_relative "namedict/blacklist"
 require_relative "namedict/char"
 require_relative "namedict/dict"
