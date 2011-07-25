@@ -31,6 +31,4 @@ class Blacklist
   
   private_class_method :new
   private :sweep
-  
-  return @dict
 end
