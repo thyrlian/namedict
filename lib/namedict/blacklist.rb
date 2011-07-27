@@ -5,9 +5,14 @@ class Blacklist
   def initialize(dict, &block)
     @dict = dict
     @list = []
+    @path_prj = File.expand_path( File.join( File.dirname(__FILE__), "..", ".." ) )
     instance_eval(&block)
     @list.uniq!
+    # puts @dict.chars.size
     sweep unless @list.size == 0
+    # puts @list.size
+    # puts @dict.size
+    # puts @list.size + @dict.size
   end
 
   class << self
@@ -17,16 +22,27 @@ class Blacklist
   end
 
   def activate(file_list)
-    list_excluded = File.open(File.join(path_prj, 'data', 'Blacklist', file_list), "r:utf-8").inject([]) do |chars, line|
-      chars << line.chomp
+    list_excluded = File.open(File.join(@path_prj, 'data', 'Blacklist', file_list), "r:utf-8").inject([]) do |chars, line|
+      line.rm_comment! ? chars << line : chars
     end
     @list.concat(list_excluded)
-    # @dict.affect_by(list_excluded)
   end
   
   def sweep
-    # for each in @list, kick out from @dict
-    # create hash to speed up processing
+    hsh_dict = @dict.chars.inject({}) do |hsh, char|
+      hsh[char.ch] = char
+      hsh
+    end
+    
+    @list.each do |black_ch|
+      hsh_dict.delete(black_ch) if hsh_dict[black_ch]
+    end
+    
+    @dict = []
+    
+    hsh_dict.each do |key, value|
+      @dict << value
+    end
   end
   
   private_class_method :new
