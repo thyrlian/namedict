@@ -8,11 +8,8 @@ class Blacklist
     @path_prj = File.expand_path( File.join( File.dirname(__FILE__), "..", ".." ) )
     instance_eval(&block)
     @list.uniq!
-    # puts @dict.chars.size
     sweep unless @list.size == 0
-    # puts @list.size
-    # puts @dict.size
-    # puts @list.size + @dict.size
+    dict.chars.replace(@dict)
   end
 
   class << self
