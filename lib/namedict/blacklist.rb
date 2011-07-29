@@ -1,4 +1,5 @@
 # DSL implementation of Blacklist
+# Destroy method of new!  Passed parameter dict will be changed by reference
 class Blacklist
   attr_accessor :dict, :list
 
