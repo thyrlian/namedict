@@ -23,7 +23,7 @@ ben
 beng
 bi
 bian
-biao
+#biao
 bie
 bin
 bing
@@ -50,23 +50,23 @@ chen
 cheng
 chi
 chong
-chou
+#chou
 chu
-chua
-chuai
-chuan
-chuang
-chui
+#chua
+#chuai
+#chuan
+#chuang
+#chui
 chun
-chuo
+#chuo
 ci
-cong
-cou
+#cong
+#cou
 cu
-cuan
-cui
+#cuan
+#cui
 cun
-cuo
+#cuo
 
 ### D
 da
@@ -79,19 +79,19 @@ den
 dei
 deng
 di
-dia
+#dia
 dian
-diao
+#diao
 die
 ding
-diu
+#diu
 dong
-dou
-du
-duan
-dui
+#dou
+#du
+#duan
+#dui
 dun
-duo
+#duo
 
 ### E
 e
@@ -108,7 +108,7 @@ fei
 fen
 feng
 fo
-fou
+#fou
 fu
 
 ### G
@@ -117,20 +117,20 @@ gai
 gan
 gang
 gao
-ge
+#ge
 gei
 gen
 geng
 gong
-gou
+#gou
 gu
-gua
-guai
-guan
-guang
-gui
+#gua
+#guai
+#guan
+#guang
+#gui
 gun
-guo
+#guo
 
 ### H
 ha
@@ -143,30 +143,30 @@ hei
 hen
 heng
 hong
-hou
+#hou
 hu
-hua
-huai
-huan
-huang
-hui
+#hua
+#huai
+#huan
+#huang
+#hui
 hun
-huo
+#huo
 
 ### J
 ji
-jia
-jian
-jiang
-jiao
+#jia
+#jian
+#jiang
+#jiao
 jie
 jin
 jing
-jiong
-jiu
-ju
-juan
-jue
+#jiong
+#jiu
+#ju
+#juan
+#jue
 jun
 
 ### K
@@ -175,19 +175,19 @@ kai
 kan
 kang
 kao
-ke
+#ke
 ken
 keng
 kong
-kou
+#kou
 ku
-kua
-kuai
-kuan
-kuang
-kui
+#kua
+#kuai
+#kuan
+#kuang
+#kui
 kun
-kuo
+#kuo
 
 ### L
 la
@@ -195,26 +195,26 @@ lai
 lan
 lang
 lao
-le
+#le
 lei
 leng
 li
-lia
-lian
-liang
-liao
-lie
+#lia
+#lian
+#liang
+#liao
+#lie
 lin
 ling
-liu
+#liu
 long
-lou
+#lou
 lu
-lv
-luan
-lue
+#lv
+#luan
+#lue
 lun
-luo
+#luo
 
 ### M
 m
@@ -236,39 +236,39 @@ ming
 miu
 mo
 mou
-mu
+#mu
 
 ### N
-na
-nai
+#na
+#nai
 nan
 nang
 nao
-ne
+#ne
 nei
 nen
 neng
-ng
+#ng
 ni
 nian
 niang
-niao
+#niao
 nie
 nin
 ning
-niu
+#niu
 nong
-nou
+#nou
 nu
-nv
-nuan
-nue
-nuo
+#nv
+#nuan
+#nue
+#nuo
 nun
 
 ### O
-o
-ou
+#o
+#ou
 
 ### P
 pa
@@ -280,30 +280,30 @@ pei
 pen
 peng
 pi
-pian
-piao
+#pian
+#piao
 pie
 pin
 ping
 po
-pou
+#pou
 pu
 
 ### Q
-qi
-qia
-qian
-qiang
-qiao
-qie
-qin
-qing
-qiong
-qiu
-qu
-quan
-que
-qun
+#qi
+#qia
+#qian
+#qiang
+#qiao
+#qie
+#qin
+#qing
+#qiong
+#qiu
+#qu
+#quan
+#que
+#qun
 
 ### R
 ran
@@ -314,12 +314,12 @@ ren
 reng
 ri
 rong
-rou
+#rou
 ru
-ruan
-rui
+#ruan
+#rui
 run
-ruo
+#ruo
 
 ### S
 sa
@@ -340,23 +340,23 @@ shei
 shen
 sheng
 shi
-shou
+#shou
 shu
-shua
-shuai
-shuan
-shuang
-shui
+#shua
+#shuai
+#shuan
+#shuang
+#shui
 shun
-shuo
+#shuo
 si
 song
-sou
+#sou
 su
-suan
-sui
+#suan
+#sui
 sun
-suo
+#suo
 
 ### T
 ta
@@ -368,16 +368,16 @@ te
 teng
 ti
 tian
-tiao
+#tiao
 tie
 ting
 tong
-tou
+#tou
 tu
-tuan
-tui
+#tuan
+#tui
 tun
-tuo
+#tuo
 
 ### W
 wa
@@ -392,18 +392,18 @@ wu
 
 ### X
 xi
-xia
+#xia
 xian
 xiang
-xiao
+#xiao
 xie
 xin
 xing
-xiong
-xiu
+#xiong
+#xiu
 xu
-xuan
-xue
+#xuan
+#xue
 xun
 
 ### Y
@@ -419,8 +419,8 @@ yo
 yong
 you
 yu
-yuan
-yue
+#yuan
+#yue
 yun
 
 ### Z
@@ -444,20 +444,20 @@ zhen
 zheng
 zhi
 zhong
-zhou
+#zhou
 zhu
-zhua
-zhuai
-zhuan
-zhuang
-zhui
+#zhua
+#zhuai
+#zhuan
+#zhuang
+#zhui
 zhun
-zhuo
+#zhuo
 zi
 zong
-zou
+#zou
 zu
-zuan
-zui
+#zuan
+#zui
 zun
-zuo
+#zuo
