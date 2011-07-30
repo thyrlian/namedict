@@ -1,3 +1,4 @@
+# encoding: utf-8
 class Dict
   attr_accessor :chars
 
@@ -56,6 +57,26 @@ class Dict
     dict = PStore.new(file_ps)
     dict.transaction do
       return dict.roots.size
+    end
+  end
+  
+  def generate_names(file_names)
+    File.open(file_names, 'w+:utf-8') do |f|
+      counter = 0
+      @chars.each do |ch1|
+        @chars.each do |ch2|
+          probability = "#{sprintf( "%.6f", ( dict.chars.first.pc.to_f * dict.chars.first.pc.to_f / 100) )}%"
+          pinyin = ch1.py.inject([]) do |combination, py1|
+            ch2.py.each do |py2|
+              combination << py1.gsub(/\d+/, "") + py2.gsub(/\d+/, "")
+            end
+            combination
+          end
+          pinyin = pinyin.uniq.join(" / ")
+          f.puts "#{ch1.ch}#{ch2.ch}    #{pinyin}    意思: #{ch1.tr}; #{ch2.tr}    概率: #{probability}"
+          puts counter += 1
+        end
+      end
     end
   end
 
