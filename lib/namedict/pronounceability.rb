@@ -9,7 +9,7 @@ class Pronounceability
     @path_prj = File.expand_path( File.join( File.dirname(__FILE__), "..", ".." ) )
     instance_eval(&block)
     validate unless @pronunciation.size == 0
-    dict.chars.replace(@dict)
+    dict.chars.replace(@dict.chars)
   end
   
   class << self
@@ -23,14 +23,17 @@ class Pronounceability
       hsh[line] = true if line.rm_comment!
       hsh
     end
-    @pronunciation.merge!(pronounceable)
+    # initialize @pronunciation if it's blank, otherwise assign a value with the intersection of itself and current working language file
+    if @pronunciation.size == 0
+      @pronunciation = pronounceable
+    else
+      @pronunciation.select! { |k| @pronunciation[k] == pronounceable[k] }
+    end
   end
   
   def validate
-    @dict.chars.each do |char|
-      char.py.each do |x|
-        break(true) if @pronunciation[x.gsub(/\d+/, "")]
-      end
+    @dict.chars.select! do |char|
+      char.py.each{|x| break(true) if @pronunciation[x.gsub(/\d+/, "")]}.class == TrueClass ? true : false
     end
   end
   
