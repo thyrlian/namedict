@@ -65,7 +65,7 @@ class Dict
       counter = 0
       @chars.each do |ch1|
         @chars.each do |ch2|
-          probability = "#{sprintf( "%.6f", ( dict.chars.first.pc.to_f * dict.chars.first.pc.to_f / 100) )}%"
+          probability = "#{sprintf( "%.6f", ( ch1.pc.to_f * ch2.pc.to_f / 100) )}%"
           pinyin = ch1.py.inject([]) do |combination, py1|
             ch2.py.each do |py2|
               combination << py1.gsub(/\d+/, "") + py2.gsub(/\d+/, "")
