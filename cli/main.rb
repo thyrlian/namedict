@@ -7,24 +7,18 @@ file_names = File.join( path_prj, "Names" )
 dict = Dict.new(file_chinese_character_list, file_ps)
 
 Blacklist.apply_to dict do
-
   activate "feminine"
   activate "surname"
   activate "seniority"
   activate "other"
   activate "derogatory"
   activate "unusual"
-
 end
 
 Pronounceability.affect dict do
-
   follow "English"
-
 end
 
 puts "### Total number of characters: #{dict.chars.size}"
-# puts dict.chars.first.inspect
-# puts dict.chars.last.inspect
-dict.generate_names(file_names)
+dict.generate_names(file_names) # file generated will be larger than 600MB
 puts "### Finished!!!  Total number of names: #{dict.chars.size * dict.chars.size}"
