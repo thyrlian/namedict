@@ -11,7 +11,7 @@ class TestString < Test::Unit::TestCase
     end
   end
 
-  def test_rm_comment
+  def test_rm_comment!
     assert_equal(["李", "李", "李", "李", "临", "兵", "斗", "者", "皆", "阵", "列", "在", "前"], @list)
   end
 end
