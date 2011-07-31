@@ -22,4 +22,24 @@ class TestDict < Test::Unit::TestCase
   def test_dict_last
     assert_equal("鴒", @dict.chars.last.ch)
   end
+  
+  def test_parse
+    
+  end
+  
+  def test_store
+    
+  end
+  
+  def test_retrieve
+    
+  end
+  
+  def test_count
+    
+  end
+  
+  def test_generate_names
+    
+  end
 end
