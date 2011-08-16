@@ -1,6 +1,6 @@
 # DSL implementation of Pronounceability
 # Destroy method of new!  Passed parameter dict will be changed by reference
-class Pronounceability
+class Pronounceability# < Customization
   attr_accessor :dict, :pronunciation
   
   def initialize(dict, &block)
