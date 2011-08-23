@@ -8,8 +8,6 @@ Before you use this utility, please try to answer the three questions below.  If
 
 Congratulations, Mr. Yes!  I think this tool will meet your requirements and helps you give your child an Easy-to-Read Chinese name.  That's the initial idea, just to make it pronounceable for foreigners, and provide a consistent pronunciation in Chinese and other languages.  It's not trying to catch up with the international trend.
 
----
-
 ## Examples
 
 Here are a couple of typical Chinese names which could twist foreigners' tongue:
@@ -17,7 +15,6 @@ Here are a couple of typical Chinese names which could twist foreigners' tongue:
 * 晓岚 xiaolan  -  "x" in Deutsch is pronounced as "ks"
 *   科 ke       -  "ke" actually sounds like "key" in English
 *   乖 guai     -  "guai" will be divided into three parts, finally it's "gu" + "a" + "yi"
----
 
 ## Exceptions
 
@@ -25,9 +22,5 @@ Everything in the world has an exception, so does the pronunciation of Chinese n
 
 * As mentioned above, "te" has a different pronunciation in English, just like the word "tea".  However, if you add another Chinese Pinyin behind, e.g. "teran", then "te" performs the same pronunciation as in Chinese, no more like "tea".
 
----
-
 ## Functions
 
-
----
