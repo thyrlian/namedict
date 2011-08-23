@@ -24,3 +24,8 @@ Everything in the world has an exception, so does the pronunciation of Chinese n
 
 ## Functions
 
+Of course it's not limited to only providing Easy-to-Read pronunciation, but also some other useful functionalities, and it's easy to extend.
+
+* Boy or girl names
+* Nonnegative meaning
+* Avoid taboo words for character combinations
