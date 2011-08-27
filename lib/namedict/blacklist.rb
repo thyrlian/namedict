@@ -1,48 +1,16 @@
-# DSL implementation of Blacklist
-# Destroy method of new!  Passed parameter dict will be changed by reference
-class Blacklist# < Customization
-  attr_accessor :dict, :list
-
-  def initialize(dict, &block)
-    @dict = dict
-    @list = []
-    @path_prj = File.expand_path( File.join( File.dirname(__FILE__), "..", ".." ) )
-    instance_eval(&block)
-    @list.uniq!
-    sweep unless @list.size == 0
-    dict.chars.replace(@dict)
-  end
-
-  class << self
-    def apply_to(dict, &block)
-      new(dict, &block)
-    end
-  end
-
-  def activate(file_list)
-    list_excluded = File.open(File.join(@path_prj, 'data', 'Blacklist', file_list), "r:utf-8").inject([]) do |chars, line|
-      line.rm_comment! ? chars << line : chars
-    end
-    @list.concat(list_excluded)
+class Blacklist < Customization
+  def set_dir_name
+    @dir_name = "Blacklist"
   end
   
-  def sweep
-    hsh_dict = @dict.chars.inject({}) do |hsh, char|
-      hsh[char.ch] = char
-      hsh
-    end
-    
-    @list.each do |black_ch|
-      hsh_dict.delete(black_ch) if hsh_dict[black_ch]
-    end
-    
-    @dict = []
-    
-    hsh_dict.each do |key, value|
-      @dict << value
-    end
+  def activate(file)
+    super
+    @list_loaded.each_key { |k| @list[k] = @list_loaded[k] }
   end
   
-  private_class_method :new
-  private :sweep
+  def validate
+    @chars.select! do |char|
+      @list[char.ch] ? false : true
+    end
+  end
 end
