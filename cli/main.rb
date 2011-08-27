@@ -15,8 +15,8 @@ Blacklist.apply_to dict do
   activate "unusual"
 end
 
-Pronounceability.affect dict do
-  follow "English"
+Pronounceability.apply_to dict do
+  activate "English"
 end
 
 puts "### Total number of characters: #{dict.chars.size}"
