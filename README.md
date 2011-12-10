@@ -29,3 +29,8 @@ Of course it's not limited to only providing Easy-to-Read pronunciation, but als
 * Boy or girl names
 * Nonnegative meaning
 * Avoid taboo words for character combinations
+
+## Something Extra
+
+Have you heard of Number of the Beast?  It's a super magic number: 666 (DCLXVI in Roman numeral).  As for name, it's called the name of the Devil.  But How?  Count "a" as 100, "b" as 101, etc. and sum up all letters in one's last name (I actually did it with first name, since seldom Chinese family name has 6 letters), if the total number equals 666, then we say it's the Devil's name, just like Hitler.
+But after I count the numbers for all the combinations by 9933 Chinese characters, I couldn't find any.  So, please ignore this feature (though you can still find it in lib/string.rb).
