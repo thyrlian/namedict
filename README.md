@@ -34,3 +34,12 @@ Of course it's not limited to only providing Easy-to-Read pronunciation, but als
 
 Have you heard of Number of the Beast?  It's a super magic number: 666 (DCLXVI in Roman numeral).  As for name, it's called the name of the Devil.  But How?  Count "a" as 100, "b" as 101, etc. and sum up all letters in one's last name (I actually did it with first name, since seldom Chinese family name has 6 letters), if the total number equals 666, then we say it's the Devil's name, just like Hitler.
 But after I count the numbers for all the combinations by 9933 Chinese characters, I couldn't find any.  So, please ignore this feature (though you can still find it in lib/string.rb).
+
+## ToDo
+
+* Use the similarities of sound waves between pronunciations in different languages to build a pronunciation table (consistency).
+* Accept location parameter, to generate location associated names.
+* Fetch the weather report (or season) of current location.
+* Hot news based services as well, like the typical Chinese name: "建国" (establishment of China) were given a lot during year 1949, when P.R.China was established.
+* Add weights to some Chinese character component, give high score to those names.
+* Also consider from hieroglyph's perspective. 
