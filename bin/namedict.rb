@@ -8,6 +8,7 @@ dict = Dict.new(file_chinese_character_list, file_ps)
 
 Blacklist.apply_to dict do
   activate "feminine"
+  activate "nonsense"
   activate "surname"
   activate "seniority"
   activate "other"
